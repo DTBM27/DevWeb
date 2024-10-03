@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vetor de Números Pares</title>
+</head>
+<body>
+    <script>
+        let quantidade = parseInt(prompt('Informe a quantidade de números pares desejada (entre 2 e 18):'));
+        
+        while (quantidade < 2 || quantidade > 18) {
+            quantidade = parseInt(prompt('Quantidade inválida. Informe um valor entre 2 e 18:'));
+        }
+
+        let pares = []; 
+        let numeroPar = 2; 
+        let i = 0; 
+
+        do {
+            pares.push(numeroPar); 
+            numeroPar += 2; 
+            i++;
+        } while (i < quantidade); 
+
+        document.write('<p>Números pares:</p>');
+        document.write('<p>' + pares.join(', ') + '</p>'); 
+    </script>
+</body>
+</html>
