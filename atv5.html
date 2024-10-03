@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação de Strings</title>
+</head>
+<body>
+    <script>
+        function transformarMaiusculas(texto) {
+            return texto.toUpperCase();
+        }
+
+        function substituirPalavra(texto, palavraAntiga, palavraNova) {
+            return texto.replace(new RegExp(palavraAntiga, 'g'), palavraNova);
+        }
+
+        function contarCaracteres(texto) {
+            return texto.length;
+        }
+
+        let textoUsuario = prompt('Insira um texto:');
+        
+        let textoMaiusculas = transformarMaiusculas(textoUsuario);
+        let textoSubstituido = substituirPalavra(textoUsuario, 'JavaScript', 'JS');
+        let numeroCaracteres = contarCaracteres(textoUsuario);
+
+        document.write('<p>Texto em maiúsculas: ' + textoMaiusculas + '</p>');
+        document.write('<p>Texto com substituição: ' + textoSubstituido + '</p>');
+        document.write('<p>Número de caracteres: ' + numeroCaracteres + '</p>');
+    </script>
+</body>
+</html>
